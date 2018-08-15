@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>apg062.hw5.controller.SessionListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>/Game</servlet-name>
+        <servlet-class>apg062.hw5.controller.GameServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/NewGame</servlet-name>
+        <servlet-class>apg062.hw5.controller.NewGameServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>/GiveUp</servlet-name>
+        <servlet-class>apg062.hw5.controller.GiveUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>/Game</servlet-name>
+        <url-pattern>/Game</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/NewGame</servlet-name>
+        <url-pattern>/startNewGame</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>/GiveUp</servlet-name>
+        <url-pattern>/giveUp</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>startNewGame</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+</web-app>

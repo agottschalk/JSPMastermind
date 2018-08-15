@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 8, 2018, 7:24:32 PM
+    Author     : Productivity
+*/
+
+h2 {
+    size: 72pt;
+}
+
+.colorPeg{
+    width: 5em;
+    text-align: center;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.feedbackPeg{
+    width: 3.6em;
+    text-align: center;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.padded{
+    padding: 8px;
+}
+
